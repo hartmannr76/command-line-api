@@ -32,6 +32,7 @@ namespace System.CommandLine
 
     public interface IStandardIn : IStandardStream
     {
+        IStandardStreamReader In { get; }
         bool IsInputRedirected { get; }
     }
 
@@ -42,5 +43,7 @@ namespace System.CommandLine
 
     public interface IStandardStreamReader : IStandardStream
     {
+        string ReadLine();
+        string ReadToEnd();
     }
 }

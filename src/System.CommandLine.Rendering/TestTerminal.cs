@@ -30,6 +30,7 @@ namespace System.CommandLine.Rendering
 
         public bool IsOutputRedirected { get; set; }
         public bool IsErrorRedirected { get; set; }
+        public IStandardStreamReader In { get; }
         public bool IsInputRedirected { get; set; }
 
         public OutputMode OutputMode { get; set; } = OutputMode.Auto;

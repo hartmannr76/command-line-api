@@ -9,6 +9,7 @@ namespace System.CommandLine
         {
             Error = StandardStreamWriter.Create(Console.Error);
             Out = StandardStreamWriter.Create(Console.Out);
+            In = StandardStreamReader.Create(Console.In);
         }
 
         public IStandardStreamWriter Error { get; }
@@ -20,5 +21,7 @@ namespace System.CommandLine
         public bool IsOutputRedirected => Console.IsOutputRedirected;
 
         public bool IsInputRedirected => Console.IsInputRedirected;
+        
+        public IStandardStreamReader In { get; }
     }
 }

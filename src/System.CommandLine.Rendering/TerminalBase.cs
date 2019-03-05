@@ -37,6 +37,8 @@ namespace System.CommandLine.Rendering
 
         public IStandardStreamWriter Error => Console.Error;
 
+        public IStandardStreamReader In => Console.In;
+
         public bool IsOutputRedirected => Console.IsOutputRedirected;
 
         public bool IsErrorRedirected => Console.IsErrorRedirected;
